@@ -13,7 +13,7 @@
   session.log (Currently only searches in current directory)
   
 .OUTPUTS
-  ./configOutput/*-config.txt
+  ./configOutput/*-config
   
 .NOTES
   Version:        3.03
@@ -53,8 +53,8 @@ def hostExtract(i):
     currentDir = os.getcwd()
     saveDir = '/'+str(destDir)+'/'
     nameDir = hostFound+'' #Used to append to end of filename
-    hostExtract.compDir = os.path.join(currentDir+saveDir+nameDir+'-config.txt') #Final output composition
-    with open(hostExtract.compDir,'w+') as f0:
+    hostExtract.compDir = os.path.join(currentDir+saveDir+nameDir+'-config') #Final output composition
+    with open(hostExtract.compDir,'w+',encoding='UTF8') as f0:
         f0.close()
 #
 def fileExtract(): 
